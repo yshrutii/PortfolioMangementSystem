@@ -11,7 +11,7 @@ public User(String userid,String name,String email)
 	this.name=name;
 	this.email=email;
 }
-public String getUserid() {
+public String getUserID() {
 	return UserId;}
 	
 public void setUserid(String userid) {
@@ -22,6 +22,7 @@ public String getName() {
 }
 public void setName(String name) {
 	this.name=name;}
+
 	public String getEmail() {
 		return email;
 	}
