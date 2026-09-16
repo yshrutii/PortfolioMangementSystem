@@ -1,4 +1,4 @@
-package com.portfolio.app.model;
+package com.portfolioproject.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,23 +8,28 @@ public class User {
     private String userid;
     private String name;
     private String email;
+
     private List<Holding> holdings;
 
     // Constructor
     public User(String userid, String name, String email) {
+
         this.userid = userid;
         this.name = name;
         this.email = email;
+
         holdings = new ArrayList<>();
     }
 
     // Add Holding
     public void addHolding(Holding holding) {
+
         holdings.add(holding);
     }
 
     // Display User
     public void display() {
+
         System.out.println("Userid: " + userid);
         System.out.println("Name: " + name);
         System.out.println("Email: " + email);
@@ -32,12 +37,36 @@ public class User {
     }
 
     // Getters and Setters
-    public String getUserid() { return userid; }
-    public void setUserid(String userid) { this.userid = userid; }
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
-    public List<Holding> getHoldings() { return holdings; }
-    public void setHoldings(List<Holding> holdings) { this.holdings = holdings; }
+
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public List<Holding> getHoldings() {
+        return holdings;
+    }
+
+    public void setHoldings(List<Holding> holdings) {
+        this.holdings = holdings;
+    }
 }
