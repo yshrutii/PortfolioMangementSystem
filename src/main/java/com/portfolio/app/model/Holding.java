@@ -1,48 +1,60 @@
 package com.portfolio.app.model;
 
 public class Holding {
-		    private String holdingId;
-		    private Asset asset;
-		    private int quantity;
 
-		    // Constructor
-		    public Holding(String holdingId,
-		                   Asset asset,
-		                   int quantity) {
+    private String holdingId;
+    private Asset asset;
+    private int quantity;
 
-		        this.holdingId = holdingId;
-		        this.asset = asset;
-		        this.quantity = quantity;
-		    }
+    // Default constructor - required for Jackson
+    public Holding() {
+    }
 
-		    // Getters
-		    public String getHoldingId() {
-		        return holdingId;
-		    }
+    // Parameterized constructor
+    public Holding(String holdingId, Asset asset, int quantity) {
+        this.holdingId = holdingId;
+        this.asset = asset;
+        this.quantity = quantity;
+    }
 
-		    public Asset getAsset() {
-		        return asset;
-		    }
+    // Getters
+    public String getHoldingId() {
+        return holdingId;
+    }
 
-		    public int getQuantity() {
-		        return quantity;
-		    }
+    public Asset getAsset() {
+        return asset;
+    }
 
-		    // Calculate total current value
-		    public double getCurrentValue() {
-		        return asset.calculateCurrentValue() * quantity;
-		    }
+    public int getQuantity() {
+        return quantity;
+    }
 
-		    @Override
-		    public String toString() {
-		        return "Holding{" +
-		                "Holding ID='" + holdingId + '\'' +
-		                ", Asset=" + asset +
-		                ", Quantity=" + quantity +
-		                ", Current Value=" + getCurrentValue() +
-		                '}';
-		    }
-		}
-	
+    // Setters - required for Jackson
+    public void setHoldingId(String holdingId) {
+        this.holdingId = holdingId;
+    }
 
+    public void setAsset(Asset asset) {
+        this.asset = asset;
+    }
 
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    // Calculate total current value
+    public double getCurrentValue() {
+        return asset.calculateCurrentValue() * quantity;
+    }
+
+    @Override
+    public String toString() {
+        return "Holding{" +
+                "Holding ID='" + holdingId + '\'' +
+                ", Asset=" + asset +
+                ", Quantity=" + quantity +
+                ", Current Value=" + getCurrentValue() +
+                '}';
+    }
+}
