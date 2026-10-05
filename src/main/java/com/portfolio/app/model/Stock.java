@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package com.portfolio.app.model;
 
 public class Stock extends Asset {
@@ -44,9 +44,8 @@ public class Stock extends Asset {
                 ", Purchase Price=" + getPurchasePrice() +
                 ", Current Price=" + currentPrice +
                 '}';
-    }
-=======
-package com.portfolio.app.model;
+   
+
 
 public class Stock extends Asset {
 
@@ -85,11 +84,11 @@ public class Stock extends Asset {
     public String toString() {
 
         return "Stock{" +
-                "Asset ID='" + getAssetId() + '\'' +
-                ", Asset Name='" + getAssetName() + '\'' +
-                ", Purchase Price=" + getPurchasePrice() +
-                ", Current Price=" + currentPrice +
-                '}';
+                "Asset ID='"  getAssetId() + '\'' +
+                ", Asset Name='"  getAssetName() + '\'' +
+                ", Purchase Price="  + getPurchasePrice() +
+                ", Current Price="  currentPrice 
+                '}'
     }
->>>>>>> branch 'main' of https://github.com/yshrutii/PortfolioMangementSystem.git
+
 }
